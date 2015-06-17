@@ -55,7 +55,8 @@ AdminTables.Users = new Tabular.Table
 			data: 'emails'
 			title: 'Email'
 			render: (value) ->
-				value[0].address
+				value[0]?.address
+				# or profile.name in case of google oauth
 			searchable: true
 		}
 		{
